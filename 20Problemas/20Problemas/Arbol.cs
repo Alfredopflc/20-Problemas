@@ -83,6 +83,62 @@ namespace _20Problemas
                 Imprimir(pNodo.Hermano);
         }
 
+        public void ImprimirArbol(Nodo pNodo) //Se imprime en Preorden (Nodo al cual queremos hacer la transversa)
+        {
+            if (pNodo == null) //Caso base, nodo que no existe
+                return;
 
+            for (int n = 0; n < i; n++) //Se agrega para diferenciar en que nivel estan los nodos
+                Console.Write("-");
+
+            Console.WriteLine(pNodo.Dato); //Se imprime el dato
+
+            if (pNodo.Hijo != null)
+            {
+                i++; //Contador para saber que profundidad existe
+                ImprimirArbol(pNodo.Hijo); //Se vuelve a llamar al mismo metodo
+                i--; //Contador vueelve al valor anterior
+            }
+
+            if (pNodo.Hermano != null) //Si existe hermano hara su transversa
+                ImprimirArbol(pNodo.Hermano);
+        }
+
+        public void Post(Nodo pNodo) //Se imprime en Preorden (Nodo al cual queremos hacer la transversa)
+        {
+            if (pNodo == null) //Caso base, nodo que no existe
+                return;
+
+            
+
+            if (pNodo.Hijo != null)
+            {            
+                Post(pNodo.Hijo); //Se vuelve a llamar al mismo metodo               
+            }
+
+            Console.Write(pNodo.Dato + " "); //Se imprime el dato
+
+            if (pNodo.Hermano != null) //Si existe hermano hara su transversa
+            {
+                Post(pNodo.Hermano);
+                
+            }
+        }
+
+        public void Enorden(Nodo pNodo)
+        {
+            if (pNodo == null)
+                return;
+
+            if (pNodo.Hijo != null)
+            {
+                Enorden(pNodo.Hijo);             
+            }
+
+
+            Console.Write(pNodo.Dato);
+
+                    
+        }
     }
 }

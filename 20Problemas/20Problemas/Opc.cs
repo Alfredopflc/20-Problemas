@@ -26,242 +26,131 @@ namespace _20Problemas
 
             if (opc == 3)
             {
+                Nodo raiz = arbol.Insertar("a(4)", null);
+                Nodo b = arbol.Insertar("b(2)", raiz);
+                Nodo c = arbol.Insertar("c(8)", raiz);
+                Nodo d = arbol.Insertar("d(1)", b);
+                Nodo e = arbol.Insertar("e(3)", b);
+                Nodo f = arbol.Insertar("f(6)", c);
+                Nodo g = arbol.Insertar("g(10)", c);
+                Nodo h = arbol.Insertar("h(5)", f);
+                Nodo i = arbol.Insertar("i(7)", f);
+                Nodo j = arbol.Insertar("j(9)", g);
+                Nodo k = arbol.Insertar("k(11)", g);
 
+                arbol.ImprimirArbol(raiz);
+                Console.WriteLine();
+                raiz = arbol.Insertar("a", null);
+                b = arbol.Insertar("b", raiz);
+                c = arbol.Insertar("c", raiz);
+                d = arbol.Insertar("d", b);
+                e = arbol.Insertar("e", b);
+                f = arbol.Insertar("f", c);
+                g = arbol.Insertar("g", c);
+                arbol.ImprimirArbol(raiz);
+
+                tree.Insert(4);
+                tree.Insert(2);
+                tree.Insert(8);
+                tree.Insert(1);
+                tree.Insert(3);
+                tree.Insert(6);
+                tree.Insert(10);
+                tree.Insert(5);
+                tree.Insert(7);
+                tree.Insert(9);
+                tree.Insert(11);
+                Console.WriteLine("\nd,e,b,h,i,f,j,k,g,c,a");
+                Console.WriteLine("\nInorden:");
+                tree.Inorder(tree.ReturnRoot());
             }
 
             if (opc == 4)
-            {
-                Nodo x, y;
-                Nodo raiz = arbol.Insertar("B", null); //Nodo raiz
+            {              
+                Nodo raiz = arbol.Insertar("Banana(1)", null); //Nodo raiz
+                Nodo nada = arbol.Insertar("", raiz);
+                Nodo Melocoton = arbol.Insertar("Melocoton(5)", raiz);
+                Nodo Manzana = arbol.Insertar("Manzana(4)", Melocoton);
 
-                Nodo a = arbol.Insertar("A", raiz);
-                Nodo n = arbol.Insertar("N", a);
-                a = arbol.Insertar("A", n);
-                n = arbol.Insertar("N", a);
-                a = arbol.Insertar("A", n);
-                arbol.Imprimir(raiz);
+                Nodo Coco = arbol.Insertar("Coco(2)", Manzana);
+                Nodo nada4 = arbol.Insertar("", Manzana);
+                Nodo nada2 = arbol.Insertar("", Coco);
+                Nodo Mango = arbol.Insertar("Mango(3)", Coco);
+                Nodo Pera = arbol.Insertar("Pera(7)", Melocoton);
+                Nodo Papaya = arbol.Insertar("Papaya(6)", Pera);
 
-                Console.WriteLine();
-                raiz = arbol.Insertar("M", null);
-                y = arbol.Insertar("E", raiz);
-                x = arbol.Insertar("L", y);
-                y = arbol.Insertar("O", x);
-                x = arbol.Insertar("C", y);
-                y = arbol.Insertar("O", x);
-                x = arbol.Insertar("T", y);
-                y = arbol.Insertar("O", x);
-                x = arbol.Insertar("N", y);
-                arbol.Imprimir(raiz);
-
-                Console.WriteLine();
-                raiz = arbol.Insertar("M", null);
-                x = arbol.Insertar("A", raiz);
-                y = arbol.Insertar("N", x);
-                x = arbol.Insertar("Z", y);
-                y = arbol.Insertar("A", x);
-                x = arbol.Insertar("N", y);
-                y = arbol.Insertar("A", x);
-                arbol.Imprimir(raiz);
-
-                Console.WriteLine();
-                raiz = arbol.Insertar("P", null);
-                x = arbol.Insertar("E", raiz);
-                y = arbol.Insertar("R", x);
-                x = arbol.Insertar("A", y);
-                arbol.Imprimir(raiz);
-
-                Console.WriteLine();
-                raiz = arbol.Insertar("C", null);
-                x = arbol.Insertar("O", raiz);
-                y = arbol.Insertar("C", x);
-                x = arbol.Insertar("O", y);
-                arbol.Imprimir(raiz);
-
-                Console.WriteLine();
-                raiz = arbol.Insertar("M", null);
-                x = arbol.Insertar("A", raiz);
-                y = arbol.Insertar("N", x);
-                x = arbol.Insertar("G", y);
-                y = arbol.Insertar("O", x);
-                arbol.Imprimir(raiz);
-
-                Console.WriteLine();
-                raiz = arbol.Insertar("P", null);
-                x = arbol.Insertar("A", raiz);
-                y = arbol.Insertar("P", x);
-                x = arbol.Insertar("A", y);
-                y = arbol.Insertar("Y", x);
-                x = arbol.Insertar("A", y);
-                arbol.Imprimir(raiz);
+                arbol.ImprimirArbol(raiz);              
+                tree.Insert(1);
+                tree.Insert(5);
+                tree.Insert(4);
+                tree.Insert(7);
+                tree.Insert(2);
+                tree.Insert(3);
+                tree.Insert(6);
+                Console.WriteLine("\nInorden:");
+                tree.Inorder(tree.ReturnRoot());
             }
 
             if (opc == 5)
             {
-                Nodo raiz, x, y;
+                Nodo raiz = arbol.Insertar("Econologia(4)", null);
+                Nodo cam = arbol.Insertar("Campanologia(3)", raiz);
+                Nodo fre = arbol.Insertar("Frenologia(5)", raiz);
+                Nodo al = arbol.Insertar("Alquimia(1)", cam);
+                Nodo nada1 = arbol.Insertar("", al);
+                Nodo ast = arbol.Insertar("Astrologia(2)", al);
+                Nodo nada2 = arbol.Insertar("", fre);
+                Nodo orn = arbol.Insertar("Ornitologia(8)", fre);
+                Nodo ic = arbol.Insertar("Ictionologia(6)", orn);
+                Nodo nada3 = arbol.Insertar("", ic);
+                Nodo lim = arbol.Insertar("Limnologia(7)", ic);
 
-                raiz = arbol.Insertar("E", null);
-                x = arbol.Insertar("N", raiz);
-                y = arbol.Insertar("O", x);
-                x = arbol.Insertar("L", y);
-                y = arbol.Insertar("O", x);
-                x = arbol.Insertar("G", y);
-                y = arbol.Insertar("I", x);
-                x = arbol.Insertar("A", y);
-                arbol.Imprimir(raiz);
+                arbol.ImprimirArbol(raiz);
+                tree.Insert(4);
+                tree.Insert(5);
+                tree.Insert(3);
+                tree.Insert(8);
+                tree.Insert(6);
+                tree.Insert(7);
+                tree.Insert(1);
+                tree.Insert(2);
 
-                Console.WriteLine();
-                raiz = arbol.Insertar("F", null);
-                x = arbol.Insertar("R", raiz);
-                y = arbol.Insertar("E", x);
-                x = arbol.Insertar("N", y);
-                y = arbol.Insertar("O", x);
-                x = arbol.Insertar("L", y);
-                y = arbol.Insertar("O", x);
-                x = arbol.Insertar("G", y);
-                y = arbol.Insertar("I", x);
-                x = arbol.Insertar("A", y);
-                arbol.Imprimir(raiz);
-
-                Console.WriteLine();
-                raiz = arbol.Insertar("C", null);
-                x = arbol.Insertar("A", raiz);
-                y = arbol.Insertar("M", x);
-                x = arbol.Insertar("P", y);
-                y = arbol.Insertar("A", x);
-                x = arbol.Insertar("N", y);
-                y = arbol.Insertar("O", x);
-                x = arbol.Insertar("L", y);
-                y = arbol.Insertar("O", x);
-                x = arbol.Insertar("G", y);
-                y = arbol.Insertar("I", x);
-                x = arbol.Insertar("A", y);
-                arbol.Imprimir(raiz);
-
-                Console.WriteLine();
-                raiz = arbol.Insertar("O", null);
-                x = arbol.Insertar("R", raiz);
-                y = arbol.Insertar("N", x);
-                x = arbol.Insertar("I", y);
-                y = arbol.Insertar("T", x);
-                x = arbol.Insertar("O", y);
-                y = arbol.Insertar("L", x);
-                x = arbol.Insertar("O", y);
-                y = arbol.Insertar("G", x);
-                x = arbol.Insertar("I", y);
-                y = arbol.Insertar("A", x);
-                arbol.Imprimir(raiz);
-
-                Console.WriteLine();
-                raiz = arbol.Insertar("I", null);
-                x = arbol.Insertar("C", raiz);
-                y = arbol.Insertar("T", x);
-                x = arbol.Insertar("I", y);
-                y = arbol.Insertar("O", x);
-                x = arbol.Insertar("L", y);
-                y = arbol.Insertar("O", x);
-                x = arbol.Insertar("G", y);
-                y = arbol.Insertar("I", x);
-                x = arbol.Insertar("A", y);
-                arbol.Imprimir(raiz);
-
-                Console.WriteLine();
-                raiz = arbol.Insertar("L", null);
-                x = arbol.Insertar("I", raiz);
-                y = arbol.Insertar("M", x);
-                x = arbol.Insertar("N", y);
-                y = arbol.Insertar("O", x);
-                x = arbol.Insertar("L", y);
-                y = arbol.Insertar("O", x);
-                x = arbol.Insertar("G", y);
-                y = arbol.Insertar("I", x);
-                x = arbol.Insertar("A", y);
-                arbol.Imprimir(raiz);
-
-                Console.WriteLine();
-                raiz = arbol.Insertar("A", null);
-                x = arbol.Insertar("L", raiz);
-                y = arbol.Insertar("Q", x);
-                x = arbol.Insertar("U", y);
-                y = arbol.Insertar("I", x);
-                x = arbol.Insertar("M", y);
-                y = arbol.Insertar("I", x);
-                x = arbol.Insertar("A", y);
-                arbol.Imprimir(raiz);
-
-                Console.WriteLine();
-                raiz = arbol.Insertar("A", null);
-                x = arbol.Insertar("S", raiz);
-                y = arbol.Insertar("T", x);
-                x = arbol.Insertar("R", y);
-                y = arbol.Insertar("O", x);
-                x = arbol.Insertar("L", y);
-                y = arbol.Insertar("O", x);
-                x = arbol.Insertar("G", y);
-                y = arbol.Insertar("I", x);
-                x = arbol.Insertar("A", y);
-                arbol.Imprimir(raiz);
+                Console.WriteLine("\nInorden:");
+                tree.Inorder(tree.ReturnRoot());
             }
 
             if (opc == 6)
             {
-                Nodo raiz, x, y;
-                raiz = arbol.Insertar("E", null);
-                x = arbol.Insertar("l", raiz);
-                y = arbol.Insertar(" ", x);
-                x = arbol.Insertar("r", y);
-                y = arbol.Insertar("a", x);
-                x = arbol.Insertar("p", y);
-                y = arbol.Insertar("i", x);
-                x = arbol.Insertar("d", y);
-                y = arbol.Insertar("o", x);
-                x = arbol.Insertar(" ", y);
-                y = arbol.Insertar("z", x);
-                x = arbol.Insertar("o", y);
-                y = arbol.Insertar("r", x);
-                x = arbol.Insertar("r", y);
-                y = arbol.Insertar("o", x);
-                x = arbol.Insertar(" ", y);
-                y = arbol.Insertar("m", x);
-                x = arbol.Insertar("a", y);
-                y = arbol.Insertar("r", x);
-                x = arbol.Insertar("r", y);
-                y = arbol.Insertar("o", x);
-                x = arbol.Insertar("n", y);
-                y = arbol.Insertar(" ", x);
-                x = arbol.Insertar("s", y);
-                y = arbol.Insertar("a", x);
-                x = arbol.Insertar("l", y);
-                y = arbol.Insertar("t", x);
-                x = arbol.Insertar("a", y);
-                y = arbol.Insertar(" ", x);
-                x = arbol.Insertar("s", y);
-                y = arbol.Insertar("o", x);
-                x = arbol.Insertar("b", y);
-                y = arbol.Insertar("r", x);
-                x = arbol.Insertar("e", y);
-                y = arbol.Insertar(" ", x);
-                x = arbol.Insertar("e", y);
-                y = arbol.Insertar("l", x);
-                x = arbol.Insertar(" ", y);
-                y = arbol.Insertar("p", x);
-                x = arbol.Insertar("e", y);
-                y = arbol.Insertar("r", x);
-                x = arbol.Insertar("r", y);
-                y = arbol.Insertar("o", x);
-                x = arbol.Insertar(" ", y);
-                y = arbol.Insertar("p", x);
-                x = arbol.Insertar("e", y);
-                y = arbol.Insertar("r", x);
-                x = arbol.Insertar("e", y);
-                y = arbol.Insertar("z", x);
-                x = arbol.Insertar("o", y);
-                y = arbol.Insertar("s", x);
-                x = arbol.Insertar("o", y);
-                arbol.Imprimir(raiz);
+                Nodo raiz = arbol.Insertar("El(1)", null);
+                Nodo nada = arbol.Insertar("", raiz);
+                Nodo ra = arbol.Insertar("rapido(2)", raiz);
+                Nodo ma = arbol.Insertar("marron(4)", ra);
+                Nodo zo = arbol.Insertar("zorro(3)", ra);
+                Nodo el = arbol.Insertar("el(7)", ma);
+                Nodo pe = arbol.Insertar("perro(8)", ma);
+                Nodo per = arbol.Insertar("perezoso(9)", pe);
+                Nodo sa = arbol.Insertar("salta(5)", zo);
+                nada = arbol.Insertar("", sa);
+                Nodo so = arbol.Insertar("sobre(6)", sa);
+                arbol.ImprimirArbol(raiz);
+
+                tree.Insert(1);
+                tree.Insert(6);
+                tree.Insert(9);
+                tree.Insert(3);
+                tree.Insert(7);
+                tree.Insert(8);
+                tree.Insert(2);
+                tree.Insert(5);
+                tree.Insert(4);
+
+                Console.WriteLine("El rápido zorro marrón salta sobre el perro perezoso");
+                tree.Inorder(tree.ReturnRoot());
             }
 
             if (opc == 7)
-            {         
+            {
+                
             }
 
             if (opc == 8)
@@ -296,13 +185,74 @@ namespace _20Problemas
 
             if (opc == 9)
             {
+                CaminosMinimos Ruta = new CaminosMinimos();
+
+                
+                //NOTA: a = 1, b = 2, c = 3, d = 4, e = 5
+                Console.WriteLine("\nA)");
+                long[,] MatrizA =
+                { { 999999999, 999999999, 999999999, 999999999, 1 },
+                  { 1, 999999999, 1, 999999999, 999999999 },
+                  { 999999999, 999999999, 999999999, 999999999 , 999999999 },
+                  { 999999999, 1, 1, 999999999, 1 },
+                  { 999999999,1,999999999,999999999,999999999 }};
+
+                //Objeto de la clase
+                
+                Console.WriteLine("\n\tNOTA: a = 1, b = 2, c = 3, d = 4, e = 5 \n");
+                Console.WriteLine(Ruta.AlgoritmoFloyd(MatrizA,5));
+
+               
+                //NOTA: a = 1, b = 2, c = 3, d = 4, e = 5, f = 6
+                Console.WriteLine("\nB)");
+                long[,] MatrizB =
+                { { 999999999, 999999999, 999999999, 999999999, 999999999, 1 },
+                  { 1, 999999999, 999999999, 999999999, 999999999, 999999999 },
+                  { 999999999, 1, 999999999, 1 , 999999999, 999999999},
+                  { 999999999, 999999999, 999999999, 999999999, 1, 999999999 },
+                  { 999999999,1,1,999999999,999999999,1 },
+                  { 999999999,999999999,999999999,999999999,999999999,999999999} };
+
+                Console.WriteLine("\n\tNOTA: a = 1, b = 2, c = 3, d = 4, e = 5, f = 6 \n");
+                Console.WriteLine(Ruta.AlgoritmoFloyd(MatrizB, 6));
+
+                //NOTA: a = 1, b = 2, c = 3, d = 4, e = 5, f = 6, g =  7, h = 8, i = 9
+                Console.WriteLine("\nC)");
+                long[,] MatrizC =
+                { { 999999999, 999999999, 1,  999999999, 999999999, 999999999, 999999999, 999999999, 1 },
+                  { 1, 999999999, 1, 999999999, 999999999, 999999999, 999999999, 1, 999999999 },
+                  { 999999999, 999999999, 999999999, 999999999 , 999999999, 999999999, 999999999, 999999999, 999999999},
+                  { 999999999, 1, 1, 999999999, 1, 999999999, 999999999, 999999999, 999999999 },
+                  { 999999999,999999999, 999999999, 1, 999999999,999999999,999999999,999999999, 999999999},
+                  { 999999999,999999999,999999999,1,1,999999999, 1, 999999999, 999999999},
+                  { 999999999, 999999999, 1, 1, 999999999, 999999999, 999999999, 999999999, 999999999 },
+                  { 999999999, 999999999, 999999999, 999999999, 999999999, 1, 1, 999999999, 1 },
+                  { 1, 999999999, 999999999, 999999999, 999999999, 999999999, 1, 999999999, 999999999 } };
+
+                Console.WriteLine("\n\tNOTA: a = 1, b = 2, c = 3, d = 4, e = 5, f = 6 \n");
+                Console.WriteLine(Ruta.AlgoritmoFloyd(MatrizC, 9));
+
 
             }
 
-
             if (opc == 10)
             {
+                CaminosMinimos CM = new CaminosMinimos();
+                //NOTA: a = 1, b = 2, c = 3, d = 4, e = 5
+                Console.WriteLine("\nA)");
+                long[,] MatrizA =
+                { { 999999999, 1, 999999999, 1, 999999999 },
+                  { 1, 999999999, 999999999, 999999999, 1 },
+                  { 999999999, 1, 999999999, 999999999 , 999999999 },
+                  { 1, 999999999, 999999999, 999999999, 999999999 },
+                  { 999999999, 999999999, 1, 1,999999999 }};
 
+                Console.WriteLine("Todos son circuitos...."); 
+
+                CM.Circuitos(MatrizA, 1);
+                CM.Circuitos(MatrizA, 2);
+                CM.Circuitos(MatrizA, 3);
+                CM.Circuitos(MatrizA, 4);
             }
         }
     }

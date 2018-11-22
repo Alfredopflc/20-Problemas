@@ -10,6 +10,8 @@ namespace _20Problemas
     {
         public int item;
 
+        public string it;
+
         public Node leftc;
 
         public Node rightc;

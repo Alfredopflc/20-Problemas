@@ -58,8 +58,9 @@ namespace _20Problemas
                     }
                 }
             }
-        }   
+        }
 
+        
 
         public void Preorder(Node Root)
         {
@@ -80,6 +81,7 @@ namespace _20Problemas
                 Inorder(Root.rightc);
             }
         }
+
 
         public void Postorder(Node Root)
         {
