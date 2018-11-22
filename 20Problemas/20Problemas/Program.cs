@@ -16,12 +16,13 @@ namespace _20Problemas
 
             do
             {
+                Console.Clear();
                 Console.Write("Ingrese numero del problema \nR = "); //Menu
                 opc = int.Parse(Console.ReadLine());
 
                 O.Opcion(opc);
 
-                Console.WriteLine("Desea iniciar otro programa? \n1 = Si \n2 = No \n R = ");
+                Console.Write("\n\nDesea iniciar otro programa? \n1 = Si \n2 = No \nR = ");
                 op = int.Parse(Console.ReadLine());
 
             } while (op == 1);
